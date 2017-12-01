@@ -14,24 +14,26 @@ export class AppComponent {
   private itemDoc: AngularFirestoreDocument<any>;
   private col:AngularFirestoreCollection<any>;
   private users;
-   constructor(private afs: AngularFirestore) {
+  
+  /* constructor(private afs: AngularFirestore) {
    this.itemDoc =this.afs.doc("users/1");
    this.col=this.afs.collection("users");
    this.col.valueChanges().subscribe(res=>{
      console.log(res);
      this.users=res;
-   })
+   })*/
 
   /*let item=this.itemDoc.valueChanges().subscribe(res=>{
       //console.log(res);
     this.name=res.name;
     this.lname=res.lname;
      // this.users=res;
-    });*/
-  }
+    });
+  }*/
    send(){
-    this.col.add({name:this.name,lname:this.lname}).then(res=>{
+    //this.col.add({name:this.name,lname:this.lname}).then(res=>{
     //  alert(res);
-    })
+  //  })
+  alert(this.name+","+this.lname)
   }
 }
